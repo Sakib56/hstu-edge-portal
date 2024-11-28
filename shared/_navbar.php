@@ -16,7 +16,7 @@
           <li><a href="./index.php">Home</a></li>
           <li><a href="./about-us.php">About-us</a></li>
           <li><a href="./contact-us.php">Contact-us</a></li>
-          <li><a href="./login.php" class="">Course Registration</a></li>
+          <li><a href="./course-registration.php" class="">Course Registration</a></li>
           <li><a href="./login.php" class="btn">Login</a></li>
         </ul>
 

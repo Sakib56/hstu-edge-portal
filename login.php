@@ -39,14 +39,14 @@ if (isset($_SESSION['uid'])) {
 
 <head>
   <meta charset="UTF-8">
-  <title>School Management</title>
+  <title>Login | Hstu Edge Portal</title>
   <!-- Fontawesome CDN Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="login-form-style.css">
-  <link rel="icon" type="image/x-icon" href="images/1.png">
+  <link rel="icon" type="image/x-icon" href="images/edge_logo.png">
 </head>
 
 <body>
@@ -56,8 +56,8 @@ if (isset($_SESSION['uid'])) {
       <div class="front">
         <img src="images/loginimage.jpg" alt="">
         <div class="text">
-          <span class="text-1">SCHOOL MANAGEMENT SYSTEM<br></span>
-          <span class="text-2">Plan serve program</span>
+          <span class="text-1">HSTU EDGE PORTAL<br></span>
+          <!-- <span class="text-2">Plan serve program</span> -->
         </div>
       </div>
 

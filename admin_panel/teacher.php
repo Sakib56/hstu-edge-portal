@@ -80,7 +80,7 @@
                                 <div class="col">
                                 <select class="form-select" id="class" name="class" style="width:100%;" required>
 
-                                    <option selected disabled value="">---select--</option>
+                                    <option selected disabled value="">---select Dept--</option>
                                     <option value="null">Not Applicable</option>
                                     <!-- <option value="12s">12 (Math)</option>
                                     <option value="12s">12 (Bio)</option>
@@ -128,7 +128,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="subject" class="form-label">Related Subject</label>
+                            <label for="subject" class="form-label">Select Course</label>
                             <input type="text" class="form-control" id="subject" aria-describedby="emailHelp"
                                 name="subject" required>
                             <div class="invalid-feedback">
@@ -142,7 +142,6 @@
                                 <option selected disabled value="">--select--</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
-                                <option value="Other">Other</option>
                             </select>
                             <div class="invalid-feedback">
                                 required!

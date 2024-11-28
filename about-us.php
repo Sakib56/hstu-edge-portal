@@ -28,14 +28,15 @@
                         <div class="col-12 col-md-6 d-flex justify-content-center">
                             <div class="mb-4"
                                 style="width: 100%;  display: flex; align-items: center; justify-content: center;">
-                                <img style="width: 400px; height: 260px;" src="./images/edge_gallery2.jpg" class="card-img-bottom"
-                                    alt="...">
+                                <img style="width: 400px; height: 260px;" src="./images/edge_gallery2.jpg"
+                                    class="card-img-bottom" alt="...">
                             </div>
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="col-12">
                                 <p class="fs-5 fw-bold"> Vision</p>
-                                <p class="text-justify">300 million dollars in ICT exports by 2026 and support the construction of technology
+                                <p class="text-justify">300 million dollars in ICT exports by 2026 and support the
+                                    construction of technology
                                     and knowledge-based smart and developed Bangladesh.</p>
                             </div>
                             <div class="col-12">
@@ -59,8 +60,8 @@
 
     </main>
 
+</body>
 
 
 
-
-    <?php include('shared/_footer.php'); ?>
+<?php include('shared/_footer.php'); ?>

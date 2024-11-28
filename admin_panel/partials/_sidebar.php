@@ -1,9 +1,9 @@
 
 <div class="sidebar">
-    <a href="dashboard.php" class="logo">
+    <a href="dashboard.php" class="">
         <!-- <i class='bx bx-book-bookmark'></i> -->
-        <img src="../images/1.png">
-          <div class="logo-name"><span class="text-warning">E</span><span class="darkTextColor">R</span><span class="text-warning">P</span></div>
+        <img src="../images/edge_logo.png" style="height: 50px; margin-left:20px;margin-top:20px; ">
+          <!-- <div class="logo-name"><span class="text-primary">E</span><span class="darkTextColor">D</span><span class="text-primary">G</span><span class="darkTextColor">E</span></div> -->
     </a>
     
       <ul class="side-menu-opener">

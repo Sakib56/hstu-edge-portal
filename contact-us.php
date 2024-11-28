@@ -51,5 +51,5 @@
             </div>
         </div>
     </main>
-    <?php include('shared/_footer.php'); ?>
 </body>
+<?php include('shared/_footer.php'); ?>

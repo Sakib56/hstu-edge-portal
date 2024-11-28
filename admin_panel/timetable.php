@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
-    <title>School Management</title>
+    <title>HSTU EDGE PORTAL</title>
     <link rel="icon" type="image/x-icon" href="images/1.png">
 
    

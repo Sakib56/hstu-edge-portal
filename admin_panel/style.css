@@ -137,7 +137,6 @@ body::-webkit-scrollbar {
 .sidebar .logo {
     width: fit-content;
 }
-
 .sidebar .logo-name {
     font-size: 35px;
     margin-left: 10px;
@@ -184,7 +183,8 @@ body::-webkit-scrollbar {
 .sidebar.close {
     width: 60px;
 }
-.wdp-hour-arrow-container{
+
+.wdp-hour-arrow-container {
     height: 30px;
 }
 
@@ -1166,7 +1166,8 @@ div._flex-container button {
 .remove-table-hover tr {
     cursor: default;
 }
-.remove_hover_table tbody tr{
+
+.remove_hover_table tbody tr {
     background-color: transparent !important;
 }
 
@@ -1847,7 +1848,7 @@ div._flex-container button {
 }
 
 .modal-body input[type=date] {
-    
+
     max-width: 500px;
     color: var(--light-text);
     background-color: var(--grey);
