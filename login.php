@@ -65,9 +65,7 @@ if (isset($_SESSION['uid'])) {
     <div class="forms">
       <div class="form-content">
         <div class="login-form">
-
           <div class="title" id='board-title'>Login</div>
-
           <div class="alert-box">
             <div class="alert alert-danger text-center mt-3" role="alert" id="error-msg">
 
@@ -91,6 +89,7 @@ if (isset($_SESSION['uid'])) {
                   Submit
                 </button>
               </div>
+              <p class="text text-center mt-3"><a href="./index.php">Back To Home page</a></p>
             </div>
           </form>
 
@@ -157,7 +156,8 @@ if (isset($_SESSION['uid'])) {
 
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="confirmpassword" id='confirmpassword' placeholder='Confirm password' required>
+                <input type="password" name="confirmpassword" id='confirmpassword' placeholder='Confirm password'
+                  required>
               </div>
 
               <div class="invalid-feedback" id='passwordNotSame'>

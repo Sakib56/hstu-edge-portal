@@ -550,7 +550,7 @@
 
                             <hr>
                             <br>
-                            <div class="container" style="display: flex;">
+                            <!-- <div class="container" style="display: flex;">
 
                                 <div class="row g-3 align-items-center">
                                     <div class="col-auto">
@@ -580,7 +580,7 @@
                                 </div>
 
 
-                            </div>
+                            </div> -->
                             <br>
                             <div class="container" style="display: flex;">
                                 <div class="row g-3 align-items-center">
@@ -598,14 +598,14 @@
                                 </div>
                             </div>
                             <br>
-
+<!-- 
                             <div class="container">
                                 <a class="find" onclick="findAndshowStudents()">
                                 <i class='bx bx-search-alt'></i>
                                     <span>Find</span>
                                 </a>
 
-                            </div>
+                            </div> -->
                             <br>
                             <hr>
 

@@ -1,5 +1,7 @@
 <?php include('partials/_header.php') ?>
-
+<?php
+include('../assets/config.php');
+?>
 <!-- confirm edit alert modal-->
 <div class="modal fade" id="edit-confirmation-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
@@ -20,7 +22,8 @@
 <!-- end of onfirm edit alert modal-->
 
 <!-- alert to delete subject  -->
-<div class="modal fade" id="delete-confirmation-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="delete-confirmation-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog  modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -43,7 +46,7 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Subject</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Courses</h1>
                 <button type="button" class="close mr-2" data-bs-dismiss="modal" aria-label="Close"><i
                         class='bx bx-x'></i></button>
             </div>
@@ -52,34 +55,7 @@
                     <div class="container my-3">
 
                         <div class="mb-3">
-                            <label for="class" class="form-label">Class</label>
-                            <select class="form-select" aria-label="Default select example" name="class" id="class"
-                                required>
-                                <!-- <option selected disabled value="">--select--</option>
-                                <option>12</option>
-                                <option>11</option>
-                                <option>10</option>
-                                <option>9</option>
-                                <option>8</option>
-                                <option>7</option>
-                                <option>6</option>
-                                <option>5</option>
-                                <option>4</option>
-                                <option>3</option>
-                                <option>2</option>
-                                <option>1</option>
-                                <option>pg</option>
-                                <option>lkg</option>
-                                <option>ukg</option> -->
-                                <?php include('partials/select_classes.php') ?>
-                            </select>
-                            <div class="invalid-feedback">
-                                Please select class.
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="subject" class="form-label">Subject Name</label>
+                            <label for="subject" class="form-label">Course Name</label>
                             <input type="text" class="form-control" name="subject" id="newSubjectName"
                                 aria-describedby="emailHelp" required>
                             <div class="invalid-feedback">
@@ -107,35 +83,32 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Subject</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit course</h1>
                 <button type="button" class="close mr-2" data-bs-dismiss="modal" aria-label="Close"><i
                         class='bx bx-x'></i></button>
             </div>
             <form class="needs-validation" id="editSubjectForm" novalidate>
-            <div class="modal-body">
-                <div class="container my-3">
-
-
-
-
-                    <div class="mb-3">
-                        <label for="subject" class="form-label">Subject Name</label>
-                        <input type="text" class="form-control" id="subject-edited-name"  name="subject" aria-describedby="emailHelp" required>
-                        <div class="invalid-feedback">
-                                Please select class.
+                <div class="modal-body">
+                    <div class="container my-3">
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Course Name</label>
+                            <input type="text" class="form-control" id="subject-edited-name" name="subject"
+                                aria-describedby="emailHelp" required>
+                            <div class="invalid-feedback">
+                                Please select course.
                             </div>
+                        </div>
+
                     </div>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-primary" id="save-new-subject-name">
+                        <div><span>Save</span></div>
+                    </button>
 
                 </div>
-            </div>
-            <div class="modal-footer">
-
-                <button type="button" class="btn btn-primary" id="save-new-subject-name">
-                    <div><span>Save</span></div>
-                </button>
-
-            </div>
-        </form>
+            </form>
         </div>
     </div>
 </div>
@@ -157,7 +130,7 @@
     <main>
         <div class="header">
             <div class="left">
-                <h1>Subjects</h1>
+                <h1>Courses</h1>
             </div>
         </div>
         <div class="bottom-data">
@@ -172,7 +145,7 @@
                             <br>
                             <div class="header">
                                 <i class='bx bx-receipt'></i>
-                                <h3>Subjects </h3>
+                                <h3>Courses </h3>
                                 <a href="#" class="add" data-bs-toggle="modal" data-bs-target="#add-subject"
                                     onclick="removeValidations()">
                                     <i class='bx bx-plus'></i>
@@ -185,27 +158,12 @@
 
                                 <div class="row g-3 align-items-center">
                                     <div class="col-auto">
-                                        <label for="class" class="col-form-label">Class </label>
+                                        <label for="class" class="col-form-label">Courses </label>
                                     </div>
                                     <div class="col-auto">
-                                        <select class="form-select" aria-label="Default select example" name="class"
-                                            id="search-class">
-                                            <!--<option selected>12</option>-->
-                                            <!--<option>11</option>-->
-                                            <!--<option>10</option>-->
-                                            <!--<option>9</option>-->
-                                            <!--<option>8</option>-->
-                                            <!--<option>7</option>-->
-                                            <!--<option>6</option>-->
-                                            <!--<option>5</option>-->
-                                            <!--<option>4</option>-->
-                                            <!--<option>3</option>-->
-                                            <!--<option>2</option>-->
-                                            <!--<option>1</option>-->
-                                            <!--<option>pg</option>-->
-                                            <!--<option>lkg</option>-->
-                                            <!--<option>ukg</option>-->
-                                            <?php include('partials/select_classes.php') ?>
+                                        <select class="form-select" id="courseId" name="courseId" required>
+                                            <option selected disabled value="">--select Courses--</option>
+                                            <?php include('../assets/select_courses.php'); ?>
                                         </select>
                                     </div>
                                 </div>
@@ -213,7 +171,7 @@
                             <br>
                             <div class="container">
                                 <a class="find" id="find-btn">
-                                <i class='bx bx-search-alt'></i>
+                                    <i class='bx bx-search-alt'></i>
                                     <span>Find</span>
                                 </a>
                             </div>
@@ -227,12 +185,7 @@
                                 <div class="attendenceTable" style="display: block;">
                                     <div class="header">
                                         <i class='bx bx-list-ul'></i>
-                                        <h3 id="subject-table-header">Class 12 Subjects</h3>
-
-
-
-
-
+                                        <h3 id="subject-table-header">All Courses</h3>
                                     </div>
 
                                     <hr class="text-danger">
@@ -241,13 +194,14 @@
                                         <table>
                                             <thead>
                                                 <tr>
-                                                    <th scope="col" class="thead col-4">#</th>
-                                                    <th scope="col" class="thead col-5">Subject</th>
+                                                    <th scope="col" class="thead col-4">SL</th>
+                                                    <th scope="col" class="thead col-5">Course Name</th>
+                                                    <th scope="col" class="thead col-5">background</th>
                                                     <th scope="col" class="thead col-3">Action</th>
                                                 </tr>
                                             </thead>
-                                            <tbody id="subject-table-body">
-
+                                            <tbody>
+                                                <?php include('../assets/fetchCourse.php'); ?>
                                             </tbody>
                                         </table>
                                     </div>
@@ -286,7 +240,99 @@
     </main>
 
 </div>
+<script>
+    let selectedCourseId;
 
+    // Open the Edit Modal
+    function openEditModal(courseId, courseName) {
+        selectedCourseId = courseId;
+        document.getElementById('subject-edited-name').value = courseName;
+        const editModal = new bootstrap.Modal(document.getElementById('edit-subject'));
+        editModal.show();
+    }
 
-<script src="../assets/js/subjects.js"></script>
+    // Save Edited Course
+    document.getElementById('save-new-subject-name').addEventListener('click', () => {
+        const updatedName = document.getElementById('subject-edited-name').value.trim();
+
+        if (!updatedName) {
+            alert('Subject name cannot be empty.');
+            return;
+        }
+
+        // AJAX request to update the course
+        fetch('../assets/updateCourse.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: selectedCourseId, name: updatedName }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Course updated successfully.');
+                    location.reload();
+                } else {
+                    alert('Failed to update the course.');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    });
+
+    // Open the Delete Modal
+    function openDeleteModal(courseId) {
+        selectedCourseId = courseId;
+        const deleteModal = new bootstrap.Modal(document.getElementById('delete-confirmation-modal'));
+        deleteModal.show();
+    }
+
+    // Confirm and Delete the Course
+    function deleteSubject() {
+        // AJAX request to delete the course
+        fetch('../assets/deleteCourse.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: selectedCourseId }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Course deleted successfully.');
+                    location.reload();
+                } else {
+                    alert('Failed to delete the course.');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('add-subject-btn').addEventListener('click', () => {
+            const courseName = document.getElementById('newSubjectName').value.trim();
+
+            if (!courseName) {
+                alert('Course name cannot be empty.');
+                return;
+            }
+
+            fetch('../assets/addCourses.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name: courseName }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Course added successfully.');
+                        location.reload(); // Refresh the page to update the list
+                    } else {
+                        alert('Failed to add the course.');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    });
+
+</script>
+
+<!-- <script src="../assets/js/subjects.js"></script> -->
 <?php include('partials/_footer.php'); ?>

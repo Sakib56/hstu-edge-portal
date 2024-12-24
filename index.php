@@ -1,5 +1,4 @@
 <?php include('shared/_header.php'); ?>
-
 <main>
   <div class="big-wrapper light">
     <img src="./images/shape.png" alt="" class="shape" />

@@ -37,9 +37,8 @@
     </div>
 </div>
 <!-- end of alert to delete teacher -->
-<!--add new student model -->
 
-
+<!--add new teacher model -->
 <div class="modal" style="z-index: 2000;" id="addTeacherModal" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -75,47 +74,23 @@
 
 
                         <div class="mb-3">
-                        <label for="details" class="form-label">Class Teacher Details</label>
-                        <div class="row">
+                            <label for="details" class="form-label">Class Teacher Details</label>
+                            <div class="row">
                                 <div class="col">
-                                <select class="form-select" id="class" name="class" style="width:100%;" required>
+                                    <select class="form-select" id="class" name="class" style="width:100%;" required>
 
-                                    <option selected disabled value="">---select Dept--</option>
-                                    <option value="null">Not Applicable</option>
-                                    <!-- <option value="12s">12 (Math)</option>
-                                    <option value="12s">12 (Bio)</option>
-                                    <option value="12c">12 (Commerce)</option>
-                                    <option value="11s">11 (Math)</option>
-                                    <option value="11s">11 (Bio)</option>
-                                    <option value="11c">11 (Commerce)</option>
-                                    <option value="10">10</option>
-                                    <option value="9">9</option>
-                                    <option value="8">8</option>
-                                    <option value="7">7</option>
-                                    <option value="6">6</option>
-                                    <option value="5">5</option>
-                                    <option value="4">4</option>
-                                    <option value="3">3</option>
-                                    <option value="2">2</option>
-                                    <option value="1">1</option>
-                                    <option value="pg">pg</option>
-                                    <option value="lkg">lkg</option>
-                                    <option value="ukg">ukg</option> -->
-                                    <?php include('partials/select_classes.php') ?>
+                                        <option selected disabled value="">--select Faculty--</option>
+                                        <?php include('../assets/fetch_faculty.php'); ?>
                                     </select>
                                     <div class="invalid-feedback">
-                                    required!
+                                        required!
                                     </div>
                                 </div>
                                 <div class="col">
-                                <select class="form-select" id="section" name="section" style="width:100%;"
+                                    <select class="form-select" id="section" name="section" style="width:100%;"
                                         required>
-                                        <option selected disabled value="">--select--</option>
-                                        <!-- <option value="A">A</option>
-                                        <option value="B">B</option>
-                                        <option value="C">C</option> -->
-                                        <option value="null">Not Applicable</option>
-                                        <?php include('partials/selelct_section.php') ?>
+                                        <option selected disabled value="">--select Department--</option>
+                                        <?php include('../assets/fetch_departments.php'); ?>
                                     </select>
                                     <div class="invalid-feedback">
                                         required!
@@ -123,14 +98,16 @@
                                 </div>
                             </div>
                             <div class="invalid-feedback" id="invaldClassteacher">
-                                        Either both are not applicable or both are selected!!
-                                    </div>
+                                Either both are not applicable or both are selected!!
+                            </div>
                         </div>
 
                         <div class="mb-3">
-                            <label for="subject" class="form-label">Select Course</label>
-                            <input type="text" class="form-control" id="subject" aria-describedby="emailHelp"
-                                name="subject" required>
+                            <label for="courseId" class="form-label">Pick your course</label>
+                            <select class="form-select" id="courseId" name="courseId" required>
+                                <option selected disabled value="">--select Courses--</option>
+                                <?php include('../assets/select_courses.php'); ?>
+                            </select>
                             <div class="invalid-feedback">
                                 required!
                             </div>
@@ -255,7 +232,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                   <button type="button" onclick="backToStudentDetail()" class="btn btn-secondary">
+                    <button type="button" onclick="backToStudentDetail()" class="btn btn-secondary">
                         <div><i class='bx bxs-chevrons-left'></i><span>Back</span></div>
                     </button>
                     <button type="button" class="btn btn-primary" id="personal-info-btn">
@@ -343,7 +320,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                   <button type="button" class="btn btn-secondary" onclick="backToAddressDetail()">
+                    <button type="button" class="btn btn-secondary" onclick="backToAddressDetail()">
                         <div><i class='bx bxs-chevrons-left'></i><span>Back</span></div>
                     </button>
                     <button type="button" class="btn btn-primary" id="guardian-form-btn"><span>Submit </span></button>
@@ -431,12 +408,12 @@
                             onclick="showTeachers()">Show
                             Teachers</button>
                     </li>
-                    
-                    
+
+
                     <li class="nav-item me-1" role="presentation">
                         <button class="nav-link" id="show-leave-tab" data-bs-toggle="tab" data-bs-target="#leave-tab"
-                            type="button" role="tab" aria-controls="leave-tab" aria-selected="false"
-                          >Teachers Leave</button>
+                            type="button" role="tab" aria-controls="leave-tab" aria-selected="false">Teachers
+                            Leave</button>
                     </li>
 
                 </ul>
@@ -521,7 +498,7 @@
                     <br>
                     <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                         <div class="showAttendence">
-                           
+
                             <!-- Attendence on Specific date  -->
                             <div class="container">
                                 <br>
@@ -542,10 +519,12 @@
                                         </a> -->
 
                                         <div class="_flex-container">
-                                        <input class="form-control me-2" type="search" placeholder="Search" style="max-width: 225px;height: 40px;" id="search-teacher-name"
-                                            aria-label="Search">
-                                        <button class="btn btn-success" type="button" id="searchTeacherByNameBtn" disabled><i class='bx bx-search-alt'></i></button>
-                                    </div>
+                                            <input class="form-control me-2" type="search" placeholder="Search"
+                                                style="max-width: 225px;height: 40px;" id="search-teacher-name"
+                                                aria-label="Search">
+                                            <button class="btn btn-success" type="button" id="searchTeacherByNameBtn"
+                                                disabled><i class='bx bx-search-alt'></i></button>
+                                        </div>
 
                                     </div>
                                     <hr class="text-danger">
@@ -601,8 +580,8 @@
                     </div>
 
                     <div class="tab-pane" id="leave-tab" role="tabpanel" aria-labelledby="leave-tab" tabindex="0">
-                       <?php include('partials/teacher-shared/teachers-leave-tab.php') ?>
-                   </div>
+                        <?php include('partials/teacher-shared/teachers-leave-tab.php') ?>
+                    </div>
 
 
                 </div>

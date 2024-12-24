@@ -414,240 +414,86 @@
 
     <!-- End of Navbar -->
 
+    
     <main>
         <div class="header">
             <div class="left">
                 <h1>Students</h1>
-                <ul class="breadcrumb">
-                    <li><a href="#">
-
-                        </a></li>
-
-                </ul>
             </div>
-
         </div>
         <div class="bottom-data">
 
             <div class="orders">
-
-                <!-- Nav tabs -->
-                  <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item me-1" role="presentation">
-                        <button class="nav-link active " id="addStudentTab" data-bs-toggle="tab" data-bs-target="#home" onclick="AddStudentBtnClick()" type="button" role="tab" aria-controls="home" aria-selected="true">Add Students</button>
-                    </li>
-                    <li class="nav-item me-1" role="presentation">
-                        <button class="nav-link" id="view-students-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false" onclick="showStudents()">Show
-                            Students</button>
-                    </li>
-                    <li class="nav-item me-1" role="presentation">
-                        <button class="nav-link" id="feedback-students-tab" data-bs-toggle="tab" data-bs-target="#feedback" type="button" role="tab" aria-controls="feedback" aria-selected="false">Feedback</button>
-                    </li>
-
-
-
-                </ul>
-
                 <!-- Tab panes -->
                 <div class="tab-content">
-                    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                        <br>
-                        <!-- Take attendence -->
-                        <div class="attendenceTable" style="display: block;">
-                            <div class="header">
-                                <i class='bx bx-receipt'></i>
-                                <h3>Students</h3>
-                                <div class="student-btns">
 
-                                    <!-- <a class="add-btns"> <i class='bx bx-filter'></i></a> -->
-                                    
-                                    <div class="dropdown dropdown-center">
-                                    <a class="notif" data-bs-toggle="dropdown" aria-expanded="false" id="dropDownListForSubmit">
-                                        <i class='bx bx-filter'></i>
-                                    </a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item reset-attendence" id="add_student_dropdown" data-bs-toggle="modal" data-bs-target="#addTeacherModal">Add Student</a></li>
-                                        <li><a class="dropdown-item submit-attendence" id="remove_student_dropdown" data-bs-toggle="modal" data-bs-target="#removeStudentModel">Remove Student</a></li>
-                                    </ul>
-                                </div>
-
-                                </div>
-                            </div>
-                            <hr>
-                            <br>
-
-                            <div class="container add-remove">
-                                <ul class="insights">
-                                    <a class="addlink" data-bs-toggle="modal" data-bs-target="#addTeacherModal"
-                                        id="addTeacherButton">
-                                        <li class="additem">
-                                            <!-- <i class='bx bx-calendar-check'></i> -->
-                                            <i class='bx bxs-user-plus'></i>
-                                            <span class="info">
-                                                <h3>
-                                                    Add
-                                                </h3>
-                                                <h3>Student</h3>
-                                            </span>
-                                        </li>
-                                    </a>
-                                    <!-- model add student -->
-
-
-
-
-
-                                    <!-- end of model add student -->
-
-                                    <a class="removelink" id="remove-student-jumbo-btn" data-bs-toggle="modal" data-bs-target="#removeStudentModel">
-                                        <li class="removeitem">
-                                            <i class='bx bxs-user-minus'></i>
-                                            <span class="info">
-                                                <h3>
-                                                    Remove
-                                                </h3>
-                                                <h3>Student</h3>
-                                            </span>
-                                        </li>
-                                    </a>
-                                </ul>
-                            </div>
-
-                            <br>
-                            <hr>
-                        </div>
-
-                        <!-- end of Take attendence -->
-                    </div>
-                    <br>
-                    <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                    <div class="tab-pane active" id="profile" role="tabpanel" aria-labelledby="profile-tab"
+                        tabindex="0">
                         <div class="showAttendence">
                             <br>
                             <div class="header">
-                                <i class='bx bx-list-ul'></i>
-                                <h3>Students List</h3>
-
+                                <i class='bx bx-receipt'></i>
+                                <h3>Courses </h3>
+                                <a href="#" class="add" data-bs-toggle="modal" data-bs-target="#add-subject"
+                                    onclick="removeValidations()">
+                                    <i class='bx bx-plus'></i>
+                                    <span>Add Student</span>
+                                </a>
                             </div>
 
-                            <hr>
-                            <br>
-                            <div class="container" style="display: flex;">
+                            <!-- <hr><br> -->
+                            <!-- <div class="container" style="display: flex;">
 
                                 <div class="row g-3 align-items-center">
                                     <div class="col-auto">
-                                        <label for="inputPassword6" class="col-form-label">&nbsp;Class&nbsp; </label>
+                                        <label for="class" class="col-form-label">Courses </label>
                                     </div>
                                     <div class="col-auto">
-                                        <select class="form-select" aria-label="Default select example"
-                                            id="search-class">
-                                            <!-- <option selected>12</option>
-                                            <option>11</option>
-                                            <option>10</option>
-                                            <option>9</option>
-                                            <option>8</option>
-                                            <option>7</option>
-                                            <option>6</option>
-                                            <option>5</option>
-                                            <option>4</option>
-                                            <option>3</option>
-                                            <option>2</option>
-                                            <option>1</option>
-                                            <option>pg</option>
-                                            <option>lkg</option>
-                                            <option>ukg</option> -->
-                                            <?php include('partials/select_classes.php') ?>
-                                        </select>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <br>
-                            <div class="container" style="display: flex;">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-auto">
-                                        <label for="inputPassword6" class="col-form-label">Section </label>
-                                    </div>
-                                    <div class="col-auto">
-                                        <select class="form-select" aria-label="Default select example"
-                                            id="search-section">
-                                            <!-- <option selected>A</option>
-                                            <option>B</option>
-                                            <option>C</option> -->
-                                            <?php include('partials/selelct_section.php') ?>
+                                        <select class="form-select" id="courseId" name="courseId" required>
+                                            <option selected disabled value="">--select Courses--</option>
+                                            <?php include('../assets/select_courses.php'); ?>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <br>
-
                             <div class="container">
-                                 <a class="find" onclick="findAndshowStudents()">
-                                <i class='bx bx-search-alt'></i>
+                                <a class="find" id="find-btn">
+                                    <i class='bx bx-search-alt'></i>
                                     <span>Find</span>
                                 </a>
-
-                            </div>
-                            <br>
-                            <hr>
+                            </div> -->
 
 
+                            <hr class="text-danger">
 
-                            <!-- Attendence on Specific date  -->
                             <div class="container">
                                 <br>
                                 <!-- Take attendence -->
                                 <div class="attendenceTable" style="display: block;">
                                     <div class="header">
                                         <i class='bx bx-list-ul'></i>
-                                        <h3>Students List</h3>
-
-                                        <!-- <a href="#" class="excel">
-                                            <i class="fa fa-file-excel-o" aria-hidden="true"></i>
-                                            <span>EXCEL</span>
-                                        </a>
-
-                                        <a href="#" class="report">
-                                            <i class='bx bxs-file-pdf'></i>
-                                            <span>PDF</span>
-                                        </a> -->
-
-                                        <div class="_flex-container">
-                                        <input class="form-control me-2" type="search" placeholder="Search" style="max-width: 225px;height: 40px;" id="search-teacher-name"
-                                            aria-label="Search">
-                                        <button class="btn btn-success" type="button" id="searchTeacherByNameBtn" disabled><i class='bx bx-search-alt'></i></button>
+                                        <h3 id="subject-table-header">All Students</h3>
                                     </div>
 
-                                    </div>
                                     <hr class="text-danger">
-
-                                    <div class="container" style="display: flex;">
-
-
-
-                                     
-                                    </div>
-                                 
-
                                     <!--table-->
-                                    <div class="students-table">
-                                        <table class="remove-cursor-pointer">
+                                    <div class="students-table subject-table">
+                                        <table>
                                             <thead>
                                                 <tr>
-                                                    <th scope="col" class="thead col-2">#</th>
-                                                    <th scope="col" class="thead col-2">Student ID</th>
-                                                    <th scope="col" class="thead col-5">Name</th>
+                                                    <th scope="col" class="thead col-4">SL</th>
+                                                    <th scope="col" class="thead col-5">Course Name</th>
+                                                    <th scope="col" class="thead col-5">background</th>
                                                     <th scope="col" class="thead col-3">Action</th>
                                                 </tr>
                                             </thead>
-
-                                            <tbody id="teacher-table-body">
-                                                <!-- content come form database -->
+                                            <tbody>
+                                                <?php include('../assets/fetchCourse.php'); ?>
                                             </tbody>
-
                                         </table>
                                     </div>
+                                    <!--END table-->
                                     <div id="dataNotAvailable">
 
                                         <div class="_flex-container box-hide">
@@ -661,30 +507,14 @@
                                         </div>
 
                                     </div>
-                                    <!--END table-->
                                 </div>
-                                <hr class="text-danger">
 
-                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-secondary" id="prev-page-btn">prev</button>
-                                        <a class="btn btn-secondary disabled" role="button" aria-disabled="true"
-                                            id="page-number">1</a>
-                                        <button type="button" class="btn btn-secondary" id="next-page-btn">next</button>
-                                    </div>
-                                </div>
 
 
                             </div>
-                            <!-- Attendence on Specific date  -->
 
+                            <hr class="text-danger">
                         </div>
-                    </div>
-                    <br>
-                    <div class="tab-pane" id="feedback" role="tabpanel" aria-labelledby="feedback-tab" tabindex="0">
-
-                        <?php include('partials/student-shared/feedback-tab.php')  ?>
-
                     </div>
 
 
